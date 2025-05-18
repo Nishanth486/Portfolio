@@ -1,0 +1,267 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+#navbar h2{
+        color: white;
+        font-size: 30px;
+    }
+
+nav {
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.nav {
+    display: flex;
+    gap: 50px;
+}
+
+.nav a {
+    font-size: 15px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.power{
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    vertical-align: super;
+    margin-left: 2px;
+    color: white;
+}
+
+
+.hero {
+    background-image: url('./images/desktop-wallpaper-portfolio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 33%;
+    font-size: 2.3rem;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: transparent;
+    padding: 20px 0;
+}
+
+.marquee-track {
+    display: inline-flex;
+    animation: scroll 30s linear infinite;
+    gap: 40px;
+    align-items: center;
+}
+
+.marquee-text {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    letter-spacing: 5px;
+}
+
+.separator {
+    display: inline-block;
+    color: red;
+    font-size: 38px;
+    padding: 0 10px;
+}
+
+.about {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    height: 100vh;
+}
+
+.abt-image {
+    align-items: center;
+    flex: 1 1 40%;
+    min-width: 280px;
+    max-width: 520px;
+    display: flex;
+    justify-content: center;
+}
+
+.abt-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.abt-content {
+    flex: 1 1 55%;
+    min-width: 280px;
+}
+
+.abt-content h1 {
+    color: red;
+    font-size: 40px;
+}
+
+.abt-content p {
+    word-spacing: 5px;
+    font-size: large;
+    line-height: 1.6;
+}
+
+.abt-content button{
+    padding: 10px;
+    border-radius: 10px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    border-color: rgb(0, 0, 0);
+    border: none;
+    border: 2px solid black;
+}
+
+.abt-content button:hover{
+    background-color: rgb(0, 0, 0);
+    transition: 0.3s ease;
+    color: white;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav{
+        display: none;
+    }
+    .hero-text{
+        font-size: 1.7rem;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .nav-toggle span {
+        font-size: 2rem;
+    }
+
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        align-items: center;
+    }
+    .nav{
+        gap: 20px;
+    }
+
+
+    .nav.active a {
+        padding: 10px;
+    }
+
+    .nav.active a::after {
+        display: none;
+    }
+
+    .abt-content {
+        width: 100%;
+    }
+
+    .abt-content h1 {
+        padding-top: 70px;
+        font-size: 30px;
+    }
+    .abt-image{
+        display: none;
+    }
+    .marquee-text{
+        letter-spacing: 2px;
+    }
+
+    .marquee-track{
+        gap: 0px;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #d0d0d0;
+}
+
+@media (max-width: 992px) {
+    .interests-grid {
+        justify-content: center;
+    }
+}

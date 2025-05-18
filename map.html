@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    #navbar{
+        background-color: white;
+        box-shadow: 0 0 10px black;
+    }
+    #navbar h2{
+        color: black;
+        font-size: 30px;
+    }
+    .nav a{
+        color: black;
+    }
+    .nav a::after {
+        background-color: black;
+    }
+    .power{
+        color: black;
+    }
+    
+    main.container {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        height: 100%;
+        padding-top: 70px;
+    }
+
+    .mt-4 {
+        height: 100%;
+    }
+
+    .ratio {
+        height: 100%;
+    }
+
+    .ratio iframe {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+    <header>
+        <nav id="navbar">
+            <div>
+                <h2><span style="color: red;">N</span>ISHA<span style="color: red;">N</span>TH<span class="power">'S PORTFOLIO</span></h2>
+            </div>
+            <div>
+                <div class="nav">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="interests.html">INTERESTS</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <button class="nav-toggle">
+                    <span>&#9776;</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="mt-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.7837528783125!2d78.1804502748173!3d11.56735428863366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef0a3203a221%3A0x4f16a9f8ab70074c!2sNishanth%20Flowers!5e0!3m2!1sen!2sin!4v1747485188655!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

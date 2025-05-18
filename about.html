@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #navbar{
+        background-color: white;
+        box-shadow: 0 0 10px black;
+    }
+    #navbar h2{
+        color: black;
+        font-size: 30px;
+    }
+    .nav a{
+        color: black;
+    }
+    .nav a::after {
+        background-color: black;
+    }
+    .power{
+        color: black;
+    }
+    @media (max-width: 768px) {
+        .about{
+            height: auto;
+        }
+    }
+</style>
+<body>
+    <header>
+        <nav id="navbar">
+            <div>
+                <h2><span style="color: red;">N</span>ISHA<span style="color: red;">N</span>TH<span class="power">'S PORTFOLIO</span></h2>
+            </div>
+            <div>
+                <div class="nav">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="interests.html">INTERESTS</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <button class="nav-toggle">
+                    <span>&#9776;</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div id="about" class="about">
+            <div class="abt-image">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/happy-man-with-laptop-illustration-download-in-svg-png-gif-file-formats--male-developer-web-development-software-hardworking-people-pack-design-illustrations-8005338.png" alt="Image Not Found" style="height: fit-content; width: fit-content;">
+            </div>
+            <div class="abt-content">
+                <h1>About Me</h1><br><br>
+                <p>I'm a passionate tech enthusiast who thrives at the intersection of creativity and innovation. With a strong drive to turn concepts into tangible, real-world solutions, I specialize in building digital experiences that are both functional and impactful. My approach combines thoughtful design principles, intuitive user experiences, and smart technology to solve real problems. I take pride in crafting solutions that not only look good but also work seamlessly, reflecting my commitment to quality, detail, and usability. Whether it's developing user-friendly interfaces or bringing complex ideas to life through code, I’m always eager to push boundaries and create something meaningful.</p><br><br>
+                <a href="profile.html"><button><i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp; MY PROFILE</button></a>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

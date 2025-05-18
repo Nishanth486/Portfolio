@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+        #navbar{
+            background-color: white;
+            box-shadow: 0 0 10px black;
+        }
+        #navbar h2{
+            color: black;
+            font-size: 30px;
+        }
+        .nav a{
+            color: black;
+        }
+        .nav a::after {
+            background-color: black;
+        }
+        .power{
+            color: black;
+        }
+
+        .container {
+            padding-top: 70px;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .carousel {
+            display: grid;
+            gap: clamp(15px, 3vw, 30px);
+            grid-auto-flow: column;
+            scrollbar-width: none;
+            scroll-snap-type: inline mandatory;
+            overflow-x: auto;
+            padding: 20px;
+            scroll-behavior: smooth;
+            anchor-name: --carousel;
+            width: 100%;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            margin: 0 auto;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                display: block;
+                inline-size: min(150px, 10vw);
+            }
+
+            scroll-marker-group: after;
+
+            &::scroll-marker-group {
+                display: flex;
+                gap: 10px;
+                justify-content: safe center;
+            }
+
+            &::scroll-button(*) {
+                position: fixed;
+                position-anchor: --carousel;
+                background-color: transparent;
+                border: none;
+                width: 40px;
+                border-radius: 50%;
+                aspect-ratio: 1;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+                cursor: pointer;
+            }
+        }
+
+        .item {
+            list-style: none;
+            scroll-snap-align: center;
+            container-type: scroll-state;
+            scroll-snap-stop: always;
+
+            &::scroll-marker {
+                content: "";
+                display: block;
+                width: 12px;
+                height: 12px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                border: 1px solid red;
+                transition: all 300ms;
+            }
+        }
+
+        .item::scroll-marker:target-current {
+            background-color: red;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: clamp(280px, 80vw, 500px);
+            background-color: #fff;
+            border-radius: 12px;
+            transition: all 300ms ease;
+            overflow: hidden;
+            opacity: 0.7;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            height: 100%;
+
+        }
+
+        .card-image {
+            height: clamp(200px, 30vw, 350px);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: clamp(12px, 3vw, 20px);
+            text-align: center;
+            background-color: #fff;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: clamp(16px, 3vw, 20px);
+            margin: 0;
+            color: #333;
+            letter-spacing: 0.5px;
+        }
+
+        @container scroll-state(snapped: x) {
+            .card {
+                opacity: 1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                transform: translateY(-5px);
+            }
+        }
+
+        .card.active {
+            opacity: 1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+
+
+        .card-content p{
+            word-spacing: 5px;
+        }
+</style>
+<body>
+    <header>
+        <nav id="navbar">
+            <div>
+                <h2><span style="color: red;">N</span>ISHA<span style="color: red;">N</span>TH<span class="power">'S PORTFOLIO</span></h2>
+            </div>
+            <div>
+                <div class="nav">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="interests.html">INTERESTS</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <button class="nav-toggle">
+                    <span>&#9776;</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <ul class="carousel">
+            <li class="item">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/IMG-20240619-WA0003.jpg" alt="Image 1">
+                    </div>
+                    <div class="card-content">
+                        <p>Secured <strong>First Prize</strong> in the Paper Presentation competition organized by the Scintel Club at Knowledge Institute of Technology.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/IMG_20241003_163133.jpg" alt="Image 2">
+                    </div>
+                    <div class="card-content">
+                        <p>Our team received the <strong>Best Performing Team</strong> Award in the Idea Lab at Knowledge Institute of Technology (KIOT) for our innovative project.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="./images/IMG-20241224-WA0006.jpg" alt="Image 3">
+                    </div>
+                    <div class="card-content">
+                        <p>Received the <strong>Best Teamworker Award</strong> from LITZ TECH during my internship for outstanding collaboration and contribution."</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            });
+        });
+    </script>
+</body>
+</html>
